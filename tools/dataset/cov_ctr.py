@@ -12,6 +12,7 @@ class TaskSubset(Subset):
 
     def __getitem__(self, index):
         example = self.examples[index]
+        print(example["image_file_path"])
         image_1 = self.image_loading_and_preprocessing(example["image_file_path"][0])
         # image_2 = self.image_loading_and_preprocessing(example["image_file_path"][1])
         image = torch.stack((image_1, image_1), 0)
