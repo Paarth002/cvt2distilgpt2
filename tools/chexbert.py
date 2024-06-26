@@ -11,7 +11,11 @@ class CheXbert(nn.Module):
         self.device = device
 
         self.tokenizer = BertTokenizer.from_pretrained(bert_path)
-        config = BertConfig().from_pretrained(os.path.join(ckpt_dir, bert_path), local_files_only=True)
+        try:
+            config = BertConfig().from_pretrained(os.path.join(ckpt_dir, bert_path), local_files_only=True)
+        except:
+            print('Bert Exception catched')
+            config = BertConfig.from_pretrained(bert_path)
 
         with torch.no_grad():
 
