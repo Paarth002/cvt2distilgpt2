@@ -5,7 +5,7 @@ ckpt_zoo_dir: checkpoints
 
 devices: 1
 num_nodes: 1
-num_workers: 5
+num_workers: 4
 strategy: ddp_find_unused_parameters_true
 
 module: cv2distilgpt2_cov_ctr
