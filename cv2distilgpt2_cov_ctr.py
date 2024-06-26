@@ -18,7 +18,7 @@ from tools.metrics.report_logger import ReportLogger
 from tools.multi_image import MultiImageInput, MultiImageOutput
 
 
-class CvT2DistilGPT2IUXRayChen(CvT2DistilGPT2MIMICXRChen):
+class CvT2DistilGPT2CovCTRChen(CvT2DistilGPT2MIMICXRChen):
     def __init__(
             self,
             warm_start_modules: bool,
